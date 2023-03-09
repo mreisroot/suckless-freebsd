@@ -1,8 +1,8 @@
 #!/bin/sh
 
 # user and home directory
-user=$USER
-home=$HOME
+user=vagrant
+home=/home/$user
 
 sudo su <<- EOF
 
