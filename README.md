@@ -82,6 +82,14 @@ The virtualbox GUI will appear and, after all commands of the provision.sh and s
 
 `vagrant destroy -f`
 
+## Bugs
+
+The [errors.txt](./errors.txt) file contains the output of the provisioning script, which presents compilation errors.
+
+Although I programmed the [suckless-freebsd.sh](./suckless-freebsd.sh) script to install xorg-minimal and some other packages related to x11, it still can't finish the compilation process of the suckless tools successfully, complaining of missing header files, such as sndio.h.
+
+If you know solutions to these problems, please open a pull request.
+
 ## License
 
 Licensed under the [GNU General Public License v2.0](./LICENSE)
