@@ -1,0 +1,118 @@
+==> default: Running provisioner: shell...
+    default: Running: /tmp/vagrant-shell20230309-27959-fyfr5.sh
+    default: Updating FreeBSD repository catalogue...
+    default: FreeBSD repository is up to date.
+    default: All repositories are up to date.
+    default: Updating FreeBSD repository catalogue...
+    default: FreeBSD repository is up to date.
+    default: All repositories are up to date.
+    default: Checking integrity... done (0 conflicting)
+    default: The most recent versions of packages are already installed
+    default: Changing local password for vagrant
+    default: fatal: destination path '/home/vagrant/suckless-freebsd' already exists and is not an empty directory.
+    default: New Password:Retype New Password:src component not installed, skipped
+    default: freebsd-update fetch should not be run non-interactively.
+    default: Run freebsd-update cron instead.
+    default: Updating FreeBSD repository catalogue...
+    default: FreeBSD repository is up to date.
+    default: All repositories are up to date.
+    default: Updating FreeBSD repository catalogue...
+    default: FreeBSD repository is up to date.
+    default: All repositories are up to date.
+    default: Checking for upgrades (1 candidates): . done
+    default: Processing candidates (1 candidates): . done
+    default: Checking integrity... done (0 conflicting)
+    default: Your packages are up to date.
+    default: Updating FreeBSD repository catalogue...
+    default: FreeBSD repository is up to date.
+    default: All repositories are up to date.
+    default: Checking integrity... done (0 conflicting)
+    default: The most recent versions of packages are already installed
+    default: fatal: destination path '/home/vagrant/.config/src/dwm' already exists and is not an empty directory.
+    default: fatal: destination path '/home/vagrant/.config/src/dmenu' already exists and is not an empty directory.
+    default: fatal: destination path '/home/vagrant/.config/src/st' already exists and is not an empty directory.
+    default: fatal: destination path '/home/vagrant/.config/src/slstatus' already exists and is not an empty directory.
+    default: rm -f dwm drw.o dwm.o util.o dwm-6.4.tar.gz
+    default: dwm build options:
+    default: CFLAGS   = -std=c99 -pedantic -Wall -Wno-deprecated-declarations -Os -I/usr/local/include -I/usr/local/include/freetype2 -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_XOPEN_SOURCE=700L -DVERSION="6.4" -DXINERAMA
+    default: LDFLAGS  = -L/usr/local/lib -lX11 -lXinerama -lfontconfig -lXft
+    default: CC       = cc
+    default: cc -c -std=c99 -pedantic -Wall -Wno-deprecated-declarations -Os -I/usr/local/include -I/usr/local/include/freetype2 -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_XOPEN_SOURCE=700L -DVERSION=\"6.4\" -DXINERAMA drw.c
+    default: cc -c -std=c99 -pedantic -Wall -Wno-deprecated-declarations -Os -I/usr/local/include -I/usr/local/include/freetype2 -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_XOPEN_SOURCE=700L -DVERSION=\"6.4\" -DXINERAMA dwm.c
+    default: cc -c -std=c99 -pedantic -Wall -Wno-deprecated-declarations -Os -I/usr/local/include -I/usr/local/include/freetype2 -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_XOPEN_SOURCE=700L -DVERSION=\"6.4\" -DXINERAMA util.c
+    default: cc -o dwm drw.o dwm.o util.o -L/usr/local/lib -lX11 -lXinerama -lfontconfig -lXft
+    default: mkdir -p /usr/local/bin
+    default: cp -f dwm /usr/local/bin
+    default: chmod 755 /usr/local/bin/dwm
+    default: mkdir -p /usr/local/share/man/man1
+    default: sed "s/VERSION/6.4/g" < dwm.1 > /usr/local/share/man/man1/dwm.1
+    default: chmod 644 /usr/local/share/man/man1/dwm.1
+    default: rm -f dmenu stest drw.o dmenu.o stest.o util.o dmenu-5.2.tar.gz
+    default: dmenu build options:
+    default: CFLAGS   = -std=c99 -pedantic -Wall -Os -I/usr/local/include -I/usr/local/include/freetype2 -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_XOPEN_SOURCE=700 -D_POSIX_C_SOURCE=200809L -DVERSION="5.2" -DXINERAMA
+    default: LDFLAGS  = -L/usr/local/lib -lX11 -lXinerama -lfontconfig -lXft
+    default: CC       = cc
+    default: cc -c -std=c99 -pedantic -Wall -Os -I/usr/local/include -I/usr/local/include/freetype2 -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_XOPEN_SOURCE=700 -D_POSIX_C_SOURCE=200809L -DVERSION=\"5.2\" -DXINERAMA dmenu.c
+    default: cc -c -std=c99 -pedantic -Wall -Os -I/usr/local/include -I/usr/local/include/freetype2 -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_XOPEN_SOURCE=700 -D_POSIX_C_SOURCE=200809L -DVERSION=\"5.2\" -DXINERAMA drw.c
+    default: cc -c -std=c99 -pedantic -Wall -Os -I/usr/local/include -I/usr/local/include/freetype2 -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_XOPEN_SOURCE=700 -D_POSIX_C_SOURCE=200809L -DVERSION=\"5.2\" -DXINERAMA util.c
+    default: cc -o dmenu dmenu.o drw.o util.o -L/usr/local/lib -lX11 -lXinerama -lfontconfig -lXft
+    default: cc -c -std=c99 -pedantic -Wall -Os -I/usr/local/include -I/usr/local/include/freetype2 -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_XOPEN_SOURCE=700 -D_POSIX_C_SOURCE=200809L -DVERSION=\"5.2\" -DXINERAMA stest.c
+    default: cc -o stest stest.o -L/usr/local/lib -lX11 -lXinerama -lfontconfig -lXft
+    default: mkdir -p /usr/local/bin
+    default: cp -f dmenu dmenu_path dmenu_run stest /usr/local/bin
+    default: chmod 755 /usr/local/bin/dmenu
+    default: chmod 755 /usr/local/bin/dmenu_path
+    default: chmod 755 /usr/local/bin/dmenu_run
+    default: chmod 755 /usr/local/bin/stest
+    default: mkdir -p /usr/local/share/man/man1
+    default: sed "s/VERSION/5.2/g" < dmenu.1 > /usr/local/share/man/man1/dmenu.1
+    default: sed "s/VERSION/5.2/g" < stest.1 > /usr/local/share/man/man1/stest.1
+    default: chmod 644 /usr/local/share/man/man1/dmenu.1
+    default: chmod 644 /usr/local/share/man/man1/stest.1
+    default: rm -f st st.o x.o st-0.9.tar.gz
+    default: cc -I/usr/local/include  `pkg-config --cflags fontconfig`  `pkg-config --cflags freetype2` -DVERSION=\"0.9\" -D_XOPEN_SOURCE=600  -O2 -pipe -c st.c
+    default: /bin/sh: pkg-config: not found
+    default: /bin/sh: pkg-config: not found
+    default: cc -I/usr/local/include  `pkg-config --cflags fontconfig`  `pkg-config --cflags freetype2` -DVERSION=\"0.9\" -D_XOPEN_SOURCE=600  -O2 -pipe -c x.c
+    default: /bin/sh: pkg-config: not found
+    default: /bin/sh: pkg-config: not found
+    default: In file included from x.c:15:
+    default: /usr/local/include/X11/Xft/Xft.h:40:10: fatal error: 'ft2build.h' file not found
+    default: #include <ft2build.h>
+    default:          ^~~~~~~~~~~~
+    default: 1 error generated.
+    default: *** Error code 1
+    default: 
+    default: Stop.
+    default: make: stopped in /home/vagrant/.config/src/st
+    default: rm -f slstatus slstatus.o components/battery.o components/cat.o components/cpu.o components/datetime.o components/disk.o components/entropy.o components/hostname.o components/ip.o components/kernel_release.o components/keyboard_indicators.o components/keymap.o components/load_avg.o components/netspeeds.o components/num_files.o components/ram.o components/run_command.o components/swap.o components/temperature.o components/uptime.o components/user.o components/volume.o components/wifi.o util.o
+    default: cc -o slstatus.o -c -I/usr/local/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Wno-unused-parameter -Os slstatus.c
+    default: cc -o components/battery.o -c -I/usr/local/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Wno-unused-parameter -Os components/battery.c
+    default: cc -o components/cat.o -c -I/usr/local/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Wno-unused-parameter -Os components/cat.c
+    default: cc -o components/cpu.o -c -I/usr/local/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Wno-unused-parameter -Os components/cpu.c
+    default: cc -o components/datetime.o -c -I/usr/local/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Wno-unused-parameter -Os components/datetime.c
+    default: cc -o components/disk.o -c -I/usr/local/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Wno-unused-parameter -Os components/disk.c
+    default: cc -o components/entropy.o -c -I/usr/local/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Wno-unused-parameter -Os components/entropy.c
+    default: cc -o components/hostname.o -c -I/usr/local/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Wno-unused-parameter -Os components/hostname.c
+    default: cc -o components/ip.o -c -I/usr/local/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Wno-unused-parameter -Os components/ip.c
+    default: cc -o components/kernel_release.o -c -I/usr/local/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Wno-unused-parameter -Os components/kernel_release.c
+    default: cc -o components/keyboard_indicators.o -c -I/usr/local/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Wno-unused-parameter -Os components/keyboard_indicators.c
+    default: cc -o components/keymap.o -c -I/usr/local/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Wno-unused-parameter -Os components/keymap.c
+    default: cc -o components/load_avg.o -c -I/usr/local/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Wno-unused-parameter -Os components/load_avg.c
+    default: cc -o components/netspeeds.o -c -I/usr/local/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Wno-unused-parameter -Os components/netspeeds.c
+    default: cc -o components/num_files.o -c -I/usr/local/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Wno-unused-parameter -Os components/num_files.c
+    default: cc -o components/ram.o -c -I/usr/local/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Wno-unused-parameter -Os components/ram.c
+    default: cc -o components/run_command.o -c -I/usr/local/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Wno-unused-parameter -Os components/run_command.c
+    default: cc -o components/swap.o -c -I/usr/local/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Wno-unused-parameter -Os components/swap.c
+    default: cc -o components/temperature.o -c -I/usr/local/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Wno-unused-parameter -Os components/temperature.c
+    default: cc -o components/uptime.o -c -I/usr/local/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Wno-unused-parameter -Os components/uptime.c
+    default: cc -o components/user.o -c -I/usr/local/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Wno-unused-parameter -Os components/user.c
+    default: cc -o components/volume.o -c -I/usr/local/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Wno-unused-parameter -Os components/volume.c
+    default: components/volume.c:13:11: fatal error: 'sndio.h' file not found
+    default:         #include <sndio.h>
+    default:                  ^~~~~~~~~
+    default: 1 error generated.
+    default: *** Error code 1
+    default: 
+    default: Stop.
+    default: make: stopped in /home/vagrant/.config/src/slstatus
