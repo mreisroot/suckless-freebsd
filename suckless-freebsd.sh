@@ -1,4 +1,4 @@
-#!/bin/csh -f
+#!/bin/sh 
 
 # user and home directory
 set user = $USER
@@ -9,7 +9,7 @@ su - <<- EOF
   # Variables
   set user = "$user"
   set home = "$home"
-  set dependencies = "xorg-minimal mesa-devel libXft libXinerama xinit xrdb xrandr unclutter xclip xbacklight doas password-store pass-otp pkgconf vim tmux lynx wget curl mixertui yt-dlp pipe-viewer cups sane-backends freetype2 redshift rxvt-unicode mpv zathura zathura-ps zathura-pdf-mupdf zathura-djvu pcmanfm-gtk3"
+  set dependencies = "xorg-minimal xf86-video-intel xf86-input-keyboard xf86-input-mouse mesa-devel libXft libXinerama xinit xrdb xrandr unclutter xclip xbacklight doas password-store pass-otp pkgconf vim tmux lynx wget curl mixertui yt-dlp pipe-viewer cups sane-backends freetype2 redshift rxvt-unicode mpv zathura zathura-ps zathura-pdf-mupdf zathura-djvu pcmanfm-gtk3"
   set tools = "dwm dmenu st slstatus"
 
   # Upgrade system and install dependencies
@@ -18,19 +18,11 @@ su - <<- EOF
   pkg install -y \$dependencies
 
   # Install DevOps tools
-  printf "\nDo you want to install DevOps tools? (y/n) "
-  set ans = $<
-  if (\$ans = 'y' || \$ans = 'Y') then
-    set devops = "py39-ansible py39-ansible-lint terraform gh glab packer vagrant virtualbox-ose kubectl go"
-    pkg install -y \$devops
-  fi
+  #set devops = "py39-ansible py39-ansible-lint terraform gh glab packer vagrant virtualbox-ose kubectl go"
+  #pkg install -y \$devops
 
   # Install LaTeX
-  printf "\nDo you want to install LaTeX? (y/n) "
-  set ans = $<
-  if (\$ans2 = 'y' || \$ans2 = 'Y') then
-    pkg install -y texlive-full latex-biber
-  fi
+  #pkg install -y texlive-full latex-biber
 
   # Clone repos
   foreach i (\$tools)
@@ -43,11 +35,11 @@ su - <<- EOF
     make clean install
   end
 
-  # Copy .xinitrc to home directory
-  cp \${home}/suckless-freebsd/.xinitrc \${home}/.xinitrc
-
   # Adjust permissions
   chown -R \${user}:\${user} \${home}/.config
-  chown \${user}:\${user} \${home}/.xinitrc
-
 EOF
+
+# Get dotfiles
+git clone https://gitlab.com/mreisroot/dotfiles.git $home
+# Link .xinitrc
+$home/dotfiles/x11/setup
