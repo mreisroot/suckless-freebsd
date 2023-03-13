@@ -20,7 +20,7 @@ su - <<- EOF
   # Install DevOps tools
   printf "\nDo you want to install DevOps tools? (y/n) "
   set ans = $<
-  if (\$ans = 'y' || \$ans = 'Y') then
+  if \$ans = 'y' || \$ans = 'Y' then
     set devops = "py39-ansible py39-ansible-lint terraform gh glab packer vagrant virtualbox-ose kubectl go"
     pkg install -y \$devops
   fi
@@ -28,7 +28,7 @@ su - <<- EOF
   # Install LaTeX
   printf "\nDo you want to install LaTeX? (y/n) "
   set ans2 = $<
-  if (\$ans2 = 'y' || \$ans2 = 'Y') then
+  if \$ans2 = 'y' || \$ans2 = 'Y' then
     pkg install -y texlive-full latex-biber
   fi
 
