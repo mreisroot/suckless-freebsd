@@ -27,7 +27,7 @@ su - <<- EOF
 
   # Install LaTeX
   printf "\nDo you want to install LaTeX? (y/n) "
-  set ans2 = $<
+  set ans = $<
   if (\$ans2 = 'y' || \$ans2 = 'Y') then
     pkg install -y texlive-full latex-biber
   fi
