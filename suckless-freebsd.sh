@@ -1,8 +1,8 @@
 #!/bin/sh
 
 # user and home directory
-user $USER
-home $HOME
+user=$USER
+home=$HOME
 
 su - <<- EOF
 #!/bin/sh
@@ -53,4 +53,5 @@ su - <<- EOF
   # Adjust permissions
   chown -R \${user}:\${user} \${home}/.config
   chown \${user}:\${user} \${home}/.xinitrc
+
 EOF
