@@ -38,8 +38,3 @@ su - <<- EOF
   # Adjust permissions
   chown -R \${user}:\${user} \${home}/.config
 EOF
-
-# Get dotfiles
-git clone https://gitlab.com/mreisroot/dotfiles.git $home
-# Link .xinitrc
-$home/dotfiles/x11/setup
